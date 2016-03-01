@@ -50,49 +50,36 @@
 
   <properties>
     <calc-version>0.1.0-SNAPSHOT</calc-version>
-    <tycho-version>0.22.0</tycho-version>
-    <junit-version>4.8.1</junit-version>
+    <tycho-version>0.24.0</tycho-version>
+    <junit-version>4.11</junit-version>
   </properties>
 
   <profiles>
     <profile>
-      <id>platform-galileo</id>
+      <id>platform-luna</id>
       <activation>
         <property>
           <name>platform-version-name</name>
-          <value>galileo</value>
+          <value>luna</value>
         </property>
       </activation>
       <properties>
-        <eclipse-site>http://download.eclipse.org/releases/galileo</eclipse-site>
-        <platform-version>[3.5,3.6)</platform-version>
+        <eclipse-site>http://download.eclipse.org/releases/luna</eclipse-site>
+        <platform-version>[4,4,4.5)</platform-version>
       </properties>
     </profile>
     <profile>
-      <id>platform-helios</id>
-      <activation>
-        <property>
-          <name>platform-version-name</name>
-          <value>helios</value>
-        </property>
-      </activation>
-      <properties>
-        <eclipse-site>http://download.eclipse.org/releases/helios</eclipse-site>
-        <platform-version>[3.6,3.7)</platform-version>
-      </properties>
-    </profile>
-    <profile>
-      <id>platform-indigo</id>
+      <id>platform-mars</id>
       <activation>
         <activeByDefault>true</activeByDefault>
         <property>
           <name>platform-version-name</name>
-          <value>indigo</value>
+          <value>mars</value>
         </property>
       </activation>
       <properties>
-        <eclipse-site>http://download.eclipse.org/releases/indigo</eclipse-site>
-        <platform-version>[3.7,3.8)</platform-version>
+        <eclipse-site>http://download.eclipse.org/releases/mars</eclipse-site>
+        <platform-version>[4.5,4.6)</platform-version>
       </properties>
     </profile>
   </profiles>
@@ -181,7 +168,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-resources-plugin</artifactId>
-          <version>2.5</version>
+          <version>2.7</version>
           <configuration>
             <encoding>ISO-8859-1</encoding>
           </configuration>
@@ -189,12 +176,12 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-antrun-plugin</artifactId>
-          <version>1.7</version>
+          <version>1.8</version>
         </plugin>
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>findbugs-maven-plugin</artifactId>
-          <version>2.3.2</version>
+          <version>3.0.3</version>
           <configuration>
             <findbugsXmlOutput>true</findbugsXmlOutput>
             <failOnError>false</failOnError>
@@ -210,7 +197,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-pmd-plugin</artifactId>
-          <version>2.6</version>
+          <version>3.6</version>
           <configuration>
             <sourceEncoding>utf-8</sourceEncoding>
             <minimumTokens>100</minimumTokens>
@@ -229,7 +216,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-assembly-plugin</artifactId>
-          <version>2.2.1</version>
+          <version>2.6</version>
         </plugin>
         <plugin>
           <groupId>org.eclipse.dash.maven</groupId>
@@ -251,4 +238,3 @@
     </dependencies>
   </dependencyManagement>
 </project>
-
