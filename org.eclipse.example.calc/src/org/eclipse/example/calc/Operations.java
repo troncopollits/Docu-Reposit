@@ -28,7 +28,9 @@ public class Operations {
 	public void reset() {
 		commands.clear();
 	}
-
+	public static void hola(){
+		
+	}
 	public Operation getOperation(String name) {
 		return commands.get(name);
 	}
@@ -43,4 +45,6 @@ public class Operations {
 		Arrays.sort(keys);
 		return keys[i];
 	}
+	//Esto es un cometario
+	
 }
